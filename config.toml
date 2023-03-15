@@ -1,0 +1,10 @@
+packages = [
+    "pyshacl"
+]
+terminal = false
+
+[[fetch]]
+files = [
+    "./main.py",
+    "./vocpub.py"
+]
