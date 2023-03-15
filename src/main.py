@@ -31,7 +31,12 @@ def validate_button_callback():
         shacl_graph=Graph().parse(data=shapes, format="turtle"),
     )
 
-    display(results_text, target="terminal", append=True)
+    if conforms:
+        emoji = "✅"
+    else:
+        emoji = "❌"
+
+    display(f"{emoji} {results_text}", target="terminal", append=True)
 
 
 def load_vocpub_shapes():
