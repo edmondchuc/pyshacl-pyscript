@@ -1,11 +1,8 @@
-from typing import TYPE_CHECKING
 from datetime import datetime
 
 from rdflib import Graph
 from pyshacl import validate
-
-if TYPE_CHECKING:
-    from pyscript import Element, display
+from pyscript import Element, display
 
 import vocpub
 
@@ -15,7 +12,7 @@ def get_html_input_data(html_id: str) -> str:
 
 
 def set_html_input_data(html_id: str, value: str) -> str:
-    Element(html_id).element.value = value
+    Element(html_id).write(value)
 
 
 def validate_button_callback():
