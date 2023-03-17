@@ -1,4 +1,5 @@
 packages = [
+    "setuptools",
     "pyshacl"
 ]
 terminal = false
